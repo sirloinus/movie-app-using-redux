@@ -12,6 +12,7 @@ import './App.css';
 
 import MoviesList from './MoviesList';
 import MovieDetail from './MovieDetail';
+import Toggle from './Toggle';
 
 
 const App = () => (
@@ -22,6 +23,7 @@ const App = () => (
           <img src={logo} className="App-logo" alt="logo" />
         </Link>
       </header>
+      <Toggle/>
       <Switch>
         <Route exact path="/" component={MoviesList} />
         <Route path="/:id" component={MovieDetail} />
