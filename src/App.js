@@ -6,11 +6,13 @@ import {
   Switch,
   Link,
 } from 'react-router-dom';
+
 import logo from './logo.svg';
 import './App.css';
 
 import MoviesList from './MoviesList';
 import MovieDetail from './MovieDetail';
+
 
 const App = () => (
   <Router>
