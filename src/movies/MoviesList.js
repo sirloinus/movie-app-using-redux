@@ -8,8 +8,10 @@ import getMovies from './actions';
 
 class MoviesList extends PureComponent {
   componentDidMount() {
-    const { getMovies } = this.props;
-    getMovies();
+    const { getMovies, isLoaded } = this.props;
+    if (!isLoaded) {
+      getMovies();
+    }
   }
 
   render() {
@@ -24,6 +26,7 @@ class MoviesList extends PureComponent {
 
 const mapStateToProps = state => ({
   movies: state.movies.movies,
+  isLoaded: state.movies.moviesLoaded,
 });
 
 const mapDispatchToProps = dispatch => bindActionCreators({
