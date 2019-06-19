@@ -5,6 +5,7 @@ const initialState = {
   movieLoaded: false,
   movies: [],
   moviesLoaded: false,
+  moviesLoadedAt: null,
 };
 
 export default function (state = initialState, action) {
@@ -15,6 +16,7 @@ export default function (state = initialState, action) {
         ...state,
         movies: data,
         moviesLoaded: true,
+        moviesLoadedAt: new Date(),
       };
     case GET_MOVIE:
       return {
